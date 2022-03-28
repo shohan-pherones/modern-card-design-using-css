@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+}
+
+.cards{
+    display: grid;
+    width: 50%;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 999px) {
+    .cards{
+        grid-template-columns: repeat(1, 1fr);
+    };
+}
+@media only screen and (min-width: 1000px) {
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    };
+}
+@media only screen and (min-width: 1500px) {
+    .cards{
+        grid-template-columns: repeat(3, 1fr);
+    };
+}
+
+
+
+.card-container{
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    padding: 40px 25px;
+    border-radius: 10px;
+    margin: 25px;
+}
+
+.image img{
+    width: 150px;
+    border-radius: 50%;
+    transition: filter 0.3s linear;
+    cursor: pointer;
+}
+
+.image img:hover{
+    filter: brightness(0.8);
+}
+
+.details h2{
+    text-align: center;
+    font-size: 2em;
+    color: dodgerblue;
+    margin-bottom: 5px;
+}
+
+.details p{
+    text-align: justify;
+}
+
+.links a{
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 2px;
+    color: dodgerblue;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: 2px solid dodgerblue;
+    padding: 9px 25px;
+    border-radius: 7px;
+    transition: color 0.3s linear, background-color 0.3s linear;
+}
+
+.links a:hover{
+    color: white;
+    background-color:dodgerblue;
+}
